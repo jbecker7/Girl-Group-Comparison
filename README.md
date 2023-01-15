@@ -1,17 +1,15 @@
 # Girl Group Comparison
 Building on the silly, superfluous [GFriend Lyrics Frequency project](https://github.com/jbecker7/GFriend-Lyrics-Frequency) that I built yesterday, I decided to compare GFriend, Twice, and Blackpink. I added a step to check if the words being parsed are Korean, as I don't think considering the English and Japanese words (depending on the language of the songs) is as interesting. 
 
-I also want to add some graphs via Matplotlib. Needless to say, I'm probably on the cutting edge of data-driven third-generation KPop girl group lyric comparison.
+I have the graphs working right now, but I am still wrestling with getting Hangul to appear.
+
+<s><b>Needless to say, I'm probably on the cutting edge of data-driven third-generation KPop girl group lyric comparison.</b></s>
 
 <img src="https://i.pinimg.com/originals/18/b8/86/18b8865330c1dde73b3a5472b94593b1.jpg" alt="GFriend" width="300"/>
 
 <img src="https://lh3.googleusercontent.com/l4z8Sh5vRWmCIPW0zlgGxCqeV4N9xtbHwuWceIVUkpJhYPUeFLTCjt_Ogo9sAu9aEpREbv5NW5O-a8SzQDTqaZwcJ1aXoGF-4k6WZYj16vSQ_A=w1200-h600-pp-rj-s365" alt="Twice" width="300"/>
 
 <img src="https://imgs.search.brave.com/2E8CDMnE-FbbLTO3Kp6pXQHmsoV4vdJ8ae_1wBLLQmg/rs:fit:1001:539:1/g:ce/aHR0cHM6Ly93d3cu/YWxsa3BvcC5jb20v/dXBsb2FkLzIwMTkv/MDIvY29udGVudC8w/ODEwNTEvMjAxOTAy/MDgtYmxhY2twaW5r/anBnLmpwZw" alt="Blackpink" width="300"/>
-
-
-
-
 
 
 

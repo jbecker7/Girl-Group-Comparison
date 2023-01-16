@@ -1,8 +1,6 @@
 # Girl Group Comparison
 Building on the silly, superfluous [GFriend Lyrics Frequency project](https://github.com/jbecker7/GFriend-Lyrics-Frequency) that I built yesterday, I decided to compare GFriend, Twice, and Blackpink. I added a step to check if the words being parsed are Korean, as I don't think considering the English and Japanese words (depending on the language of the songs) is as interesting. 
 
-I have the graphs working right now, but I am still wrestling with getting Hangul to appear.
-
 <s><b>Needless to say, I'm probably on the cutting edge of data-driven third-generation KPop girl group lyric comparison.</b></s>
 
 <img src="https://i.pinimg.com/originals/18/b8/86/18b8865330c1dde73b3a5472b94593b1.jpg" alt="GFriend" width="300"/>
@@ -12,8 +10,14 @@ I have the graphs working right now, but I am still wrestling with getting Hangu
 <img src="https://imgs.search.brave.com/2E8CDMnE-FbbLTO3Kp6pXQHmsoV4vdJ8ae_1wBLLQmg/rs:fit:1001:539:1/g:ce/aHR0cHM6Ly93d3cu/YWxsa3BvcC5jb20v/dXBsb2FkLzIwMTkv/MDIvY29udGVudC8w/ODEwNTEvMjAxOTAy/MDgtYmxhY2twaW5r/anBnLmpwZw" alt="Blackpink" width="300"/>
 
 
+Honestly, I am still not happy with these graphs since I had to romanize them, but I am not currently in the mood to mess with fonts more haha
 
 
+![GFriend](https://user-images.githubusercontent.com/76632760/212593414-15c6f5c2-f41a-4fda-8579-e6d93b0a4ddd.png)
+
+![Twice](https://user-images.githubusercontent.com/76632760/212593419-da1d5d04-a343-4046-b1a8-e84015dd2e19.png)
+
+![BP](https://user-images.githubusercontent.com/76632760/212593423-b3e6b4a3-f601-4f7e-9ccf-19e4a2a4232f.png)
 
 ```
 The 30 most common Korean words used in GFriend's songs are:

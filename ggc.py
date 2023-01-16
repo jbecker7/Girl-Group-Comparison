@@ -1,18 +1,18 @@
 import re
 import matplotlib.pyplot as plt
 import lyricsgenius as genius
-from matplotlib import font_manager
+import matplotlib.font_manager as fm
+from korean_romanizer.romanizer import Romanizer
 
-# font_url = "https://fonts.googleapis.com/earlyaccess/nanumgothic.css"
-# font_prop = font_manager.FontProperties(fname=font_url)
+
 
 # initialize Genius API object
 genius_api = genius.Genius("key")
 
 # search for GFriend songs
-gfriend_songs = genius_api.search_artist("GFriend", max_songs=50)
-twice_songs = genius_api.search_artist("Twice", max_songs=50)
-blackpink_songs = genius_api.search_artist("BlackPink", max_songs=50)
+gfriend_songs = genius_api.search_artist("GFriend", max_songs=10)
+twice_songs = genius_api.search_artist("Twice", max_songs=10)
+blackpink_songs = genius_api.search_artist("BlackPink", max_songs=10)
 
 # get the lyrics of all the songs
 gfriend_lyrics = ""
@@ -31,7 +31,7 @@ gfriend_words = gfriend_lyrics.split()
 twice_words = twice_lyrics.split()
 blackpink_words = blackpink_lyrics.split()
 
-# list of words to exclude
+# list of words to exclude, just 가사 which means lyrics (and kept coming up)
 exclude_words = ["가사]"]
 
 # function to check if a word is Korean
@@ -81,26 +81,49 @@ twice_freqs = [freq for word, freq in twice_most_common]
 blackpink_words = [word for word, freq in blackpink_most_common]
 blackpink_freqs = [freq for word, freq in blackpink_most_common]
 
+# I am so done with configuring fonts that I am just gonna romanize 
+
+gfriend_words_romanized = []
+for word in gfriend_words:
+    romanizer = Romanizer(word)
+    gfriend_words_romanized.append(romanizer.romanize())
+
+twice_words_romanized = []
+for word in twice_words:
+    romanizer = Romanizer(word)
+    twice_words_romanized.append(romanizer.romanize())
+
+blackpink_words_romanized = []
+for word in blackpink_words:
+    romanizer = Romanizer(word)
+    blackpink_words_romanized.append(romanizer.romanize())
+
+
 # create bar chart for each group
 
 plt.figure(figsize=(20,10))
-plt.bar(gfriend_words, gfriend_freqs)
+plt.bar(gfriend_words_romanized, gfriend_freqs)
 plt.title('GFriend word frequency')
 plt.xlabel('Words')
+plt.xticks(rotation=90)
 plt.ylabel('Frequency')
 plt.show()
 
 plt.figure(figsize=(20,10))
-plt.bar(twice_words, twice_freqs)
+plt.bar(twice_words_romanized, twice_freqs)
 plt.title('Twice word frequency')
 plt.xlabel('Words')
+plt.xticks(rotation=90)
 plt.ylabel('Frequency')
 plt.show()
 
 plt.figure(figsize=(20,10))
-plt.bar(blackpink_words, blackpink_freqs)
+plt.bar(blackpink_words_romanized, blackpink_freqs)
 plt.title('BlackPink word frequency')
 plt.xlabel('Words')
+plt.xticks(rotation=90)
 plt.ylabel('Frequency')
 plt.show()
+
+
 
